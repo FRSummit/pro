@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="1242.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inventorymanagement.ProductUIController">
+   <children>
+      <HBox layoutX="-10.0" layoutY="116.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TableView fx:id="productTableView" onMouseClicked="#handleMouseClick" prefHeight="400.0" prefWidth="879.0">
+              <columns>
+                <TableColumn fx:id="idColumn" prefWidth="125.0" text="ID" />
+                <TableColumn fx:id="nameColumn" prefWidth="125.0" text="NAME" />
+                  <TableColumn fx:id="typeColumn" prefWidth="125.0" text="TYPE" />
+                  <TableColumn fx:id="categoryColumn" prefWidth="125.0" text="CATEGORY" />
+                  <TableColumn fx:id="menufactureColumn" prefWidth="131.0" text="MENUFACTURE CODE" />
+                  <TableColumn fx:id="descriptionColumn" prefWidth="125.0" text="DESCRIPTION" />
+                  <TableColumn fx:id="priceColumn" prefWidth="125.0" text="UNIT PRICE" />
+              </columns>
+            </TableView>
+            <VBox prefHeight="400.0" prefWidth="364.0">
+               <children>
+                  <Label fx:id="infoUpdate" prefHeight="0.0" prefWidth="364.0" text="PRODUCT INFORMATION UPDATE">
+                     <font>
+                        <Font name="System Bold Italic" size="22.0" />
+                     </font>
+                  </Label>
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="177.0" minWidth="10.0" prefWidth="128.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="236.0" minWidth="10.0" prefWidth="236.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text=" Product Id" />
+                        <Label text=" Product Name" GridPane.rowIndex="1" />
+                        <Label text=" Product Type" GridPane.rowIndex="2" />
+                        <Label text=" Product Category" GridPane.rowIndex="3" />
+                        <Label text=" Menufacturing Code" GridPane.rowIndex="4" />
+                        <Label text=" Description" GridPane.rowIndex="5" />
+                        <Label text=" Unit Price" GridPane.rowIndex="6" />
+                        <TextField fx:id="idField" promptText="PXXXXXX" GridPane.columnIndex="1" />
+                        <TextField fx:id="nameField" promptText="Name of Product" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="priceField" promptText="00.00$" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <TextField fx:id="descriptionField" promptText="Describe about the product" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <TextField fx:id="menufacturCodeField" promptText="XXXXXXXXXXXXXXX" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <ComboBox fx:id="typeSelection" prefWidth="235.0" promptText="Product Type" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <ComboBox fx:id="categorySelection" prefWidth="235.0" promptText="Product Category" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                     </children>
+                  </GridPane>
+                  <ToolBar prefHeight="40.0" prefWidth="200.0">
+                    <items>
+                      <Button fx:id="saveButton" mnemonicParsing="false" onAction="#handleSaveAction" text="Save" />
+                        <Button fx:id="resetButton" layoutX="10.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleResetAction" text="RESET" />
+                        <Button fx:id="removeButton" layoutX="10.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleRemoveAction" text="REMOVE" />
+                        <Button fx:id="mainMenuButton" layoutX="66.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleReturnManiMenuAction" text="MAIN MENU" />
+                    </items>
+                  </ToolBar>
+                  <Label fx:id="statusBar" prefHeight="17.0" prefWidth="664.0" text=" STATUS" />
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="177.0" minWidth="10.0" prefWidth="136.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="245.0" minWidth="10.0" prefWidth="228.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <DatePicker fx:id="date" prefHeight="32.0" prefWidth="228.0" GridPane.columnIndex="1" />
+                        <Label prefHeight="36.0" prefWidth="81.0" text="Today">
+                           <font>
+                              <Font name="System Bold Italic" size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

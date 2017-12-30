@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="347.0" prefWidth="602.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inventorymanagement.MainUIController">
+   <children>
+      <VBox layoutX="35.0" layoutY="-20.0" prefHeight="200.0" prefWidth="320.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                        <MenuItem mnemonicParsing="false" onAction="#handleSupplierInformationAction" text="Supplier Information" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleSupplierPurchaseInformationAction" text="Supplier Purchase Information" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleProductInformationAction" text="Product Information" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleCustomerPurchaseInformationAction" text="Customer Purchase Information" />
+                        <MenuItem mnemonicParsing="false" onAction="#handleCustomerInformationAction" text="Customer Information" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                    <MenuItem mnemonicParsing="false" onAction="#handleCloseAction" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit" />
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                        <MenuItem mnemonicParsing="false" onAction="#handleSubmitedToAction" text="Submitted To" />
+                    <MenuItem mnemonicParsing="false" onAction="#handleSubmitedByAction" text="Submitted By" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <Label fx:id="welcome" prefHeight="129.0" prefWidth="602.0" text="WELCOME" textFill="#543333">
+               <font>
+                  <Font name="System Bold Italic" size="120.0" />
+               </font>
+            </Label>
+            <Label fx:id="welcome" text="to">
+               <font>
+                  <Font name="System Bold Italic" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="IMSC" prefHeight="59.0" prefWidth="639.0" text="Inventory Management System Center" textFill="#463232">
+               <font>
+                  <Font name="System Bold Italic" size="33.0" />
+               </font>
+            </Label>
+            <Label fx:id="statusBar" prefHeight="28.0" prefWidth="607.0" text="StatusBar">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font></Label>
+            <DatePicker fx:id="date" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,258 @@
+/*.button{
+    -fx-background-color: linear-gradient(gold, transparent);
+    -fx-text-fill: red;
+    -fx-background-radius: 20px;
+}*/
+
+.text-field{
+    -fx-background-color: linear-gradient(#deb887, transparent);
+    -fx-text-fill: #a52a2a;
+    -fx-font-color: #a52a2a;
+    -fx-prompt-text-fill: #a52a2a;
+    //-fx-background-radius: 20px;
+}
+
+//................................................................................................................................
+
+#mainMenuButton{
+    -fx-background-color: linear-gradient(#daa520, transparent);
+    -fx-text-fill: red;
+    -fx-background-radius: 20px;
+}
+
+#removeButton{
+    -fx-background-color: linear-gradient(#ff8c00, transparent);
+    -fx-text-fill: red;
+    -fx-background-radius: 20px;
+}
+
+#saveButton{
+    -fx-background-color: linear-gradient(#ffd700, transparent);
+    -fx-text-fill: red;
+    -fx-background-radius: 20px;
+}
+
+#resetButton{
+    -fx-background-color: linear-gradient(#ffa500, transparent);
+    -fx-text-fill: red;
+    -fx-background-radius: 20px;
+}
+
+#closeButton{
+    -fx-background-color: linear-gradient(#ff8c00, transparent);
+    -fx-text-fill: red;
+    -fx-background-radius: 20px;
+}
+
+//................................................................................................................................
+
+.combo-box{
+    -fx-background-color: linear-gradient(#deb887, transparent);
+    -fx-text-fill: #a52a2a;
+    //-fx-background-radius: 20px;
+}
+
+.anchor-pane{
+     -fx-background-color: linear-gradient(#696969, transparent);
+}
+
+.text-area{
+    -fx-background-color: linear-gradient(#deb887, transparent);
+    -fx-text-fill: #a52a2a;
+    //-fx-background-radius: 40px;
+    -fx-font-color: #a52a2a;
+    -fx-prompt-text-fill: #a52a2a;
+}
+
+.table-view{
+    -fx-background-color: #ff8c00;
+}
+
+.vbox{
+    -fx-background-color: #ff8c00;
+}
+
+.hbox{
+    -fx-background-color: #ff8c00;
+}
+
+//................................................................................................................................
+
+#idColumn{
+    -fx-background-color: linear-gradient( #faebd7, transparent);
+    -fx-text-fill: #a52a2a;
+}
+
+#nameColumn{
+    -fx-background-color: linear-gradient( #faebd7, transparent);
+    -fx-text-fill: #a52a2a;
+}
+
+#typeColumn{
+    -fx-background-color: linear-gradient( #faebd7, transparent);
+    -fx-text-fill: #a52a2a;
+}
+
+#phoneColumn{
+    -fx-background-color: linear-gradient( #faebd7, transparent);
+    -fx-text-fill: #a52a2a;
+}
+
+#emailColumn{
+    -fx-background-color: linear-gradient( #faebd7, transparent);
+    -fx-text-fill: #a52a2a;
+}
+
+#addressColumn{
+    -fx-background-color: linear-gradient( #faebd7, transparent);
+    -fx-text-fill: #a52a2a;
+}
+
+#supplierIdColumn{
+    -fx-background-color: linear-gradient( #faebd7, transparent);
+    -fx-text-fill: #a52a2a;
+}
+
+#customerIdColumn{
+    -fx-background-color: linear-gradient( #faebd7, transparent);
+    -fx-text-fill: #a52a2a;
+}
+
+#productidColumn{
+    -fx-background-color: linear-gradient( #faebd7, transparent);
+    -fx-text-fill: #a52a2a;
+}
+
+#productIdColumn{
+    -fx-background-color: linear-gradient( #faebd7, transparent);
+    -fx-text-fill: #a52a2a;
+}
+
+#dateColumn{
+    -fx-background-color: linear-gradient( #faebd7, transparent);
+    -fx-text-fill: #a52a2a;
+}
+
+#quantityColumn{
+    -fx-background-color: linear-gradient( #faebd7, transparent);
+    -fx-text-fill: #a52a2a;
+}
+
+#priceColumn{
+    -fx-background-color: linear-gradient( #faebd7, transparent);
+    -fx-text-fill: #a52a2a;
+}
+
+#categoryColumn{
+    -fx-background-color: linear-gradient( #faebd7, transparent);
+    -fx-text-fill: #a52a2a;
+}
+
+#menufactureColumn{
+    -fx-background-color: linear-gradient( #faebd7, transparent);
+    -fx-text-fill: #a52a2a;
+}
+
+#descriptionColumn{
+    -fx-background-color: linear-gradient( #faebd7, transparent);
+    -fx-text-fill: #a52a2a;
+}
+
+#purchaseTypeColumn{
+    -fx-background-color: linear-gradient( #faebd7, transparent);
+    -fx-text-fill: #a52a2a;
+}
+
+#purchasePriceColumn{
+    -fx-background-color: linear-gradient( #faebd7, transparent);
+    -fx-text-fill: #a52a2a;
+}
+
+//................................................................................................................................
+
+.vbox{
+    -fx-background-color: linear-gradient( #daa520, transparent);
+    -fx-text-fill: #a52a2a;
+}
+
+.grid-pane{
+    -fx-background-color: linear-gradient( #daa520, transparent);
+    -fx-text-fill: #a52a2a;
+    -fx-background-color: #daa520;
+}
+
+#infoUpdate{
+    -fx-background-color: linear-gradient( #deb887, transparent);
+    -fx-text-fill: #a52a2a;
+    -fx-font-color: #a52a2a;
+    -fx-prompt-text-fill: #a52a2a;
+}
+
+//................................................................................................................................
+
+.tool-bar{
+    -fx-background-color: linear-gradient( #deb887, transparent);
+    -fx-text-fill: #a52a2a;
+    -fx-font-color: #a52a2a;
+    -fx-prompt-text-fill: #a52a2a;
+}
+
+#statusBar{
+    -fx-background-color: linear-gradient( #deb887, transparent);
+    -fx-text-fill: #a52a2a;
+    -fx-font-color: #a52a2a;
+}
+
+#idB{
+    -fx-background-color: linear-gradient( #deb887, transparent);
+    //-fx-background-radius: 20px;
+}
+
+#nameB{
+    -fx-background-color: linear-gradient( #deb887, transparent);
+    //-fx-background-radius: 20px;
+}
+
+#batchB{
+    -fx-background-color: linear-gradient( #deb887, transparent);
+    //-fx-background-radius: 20px;
+}
+
+#idBar{
+    -fx-background-color: linear-gradient( #deb887, transparent);
+    //-fx-background-radius: 20px;
+}
+
+#nameBar{
+    -fx-background-color: linear-gradient( #deb887, transparent);
+    //-fx-background-radius: 20px;
+}
+
+#batchBar{
+    -fx-background-color: linear-gradient( #deb887, transparent);
+    //-fx-background-radius: 20px;
+}
+
+//................................................................................................................................
+
+#IMS{
+    -fx-background-color: linear-gradient( #deb887, transparent);
+    //-fx-background-radius: 20px;
+}
+
+#welcome{
+    -fx-background-color: linear-gradient( #deb887, transparent);
+}
+
+#IMSC{
+    -fx-background-color: linear-gradient( #deb887, transparent);
+    //-fx-text-fill: #a52a2a;
+}
+
+#sirName{
+    -fx-background-color: linear-gradient( #deb887, transparent);
+}
+
+#sirTitle{
+    -fx-background-color: linear-gradient( #deb887, transparent);
+}

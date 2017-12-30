@@ -1,0 +1,12 @@
+NetBeans IDE and NetBeans Platform are based on software from netbeans.org, 
+which has been dual licensed under the Common Development and Distribution 
+License (CDDL) and the GNU General Public License version 2 with Classpath 
+exception. For more information, please visit www.netbeans.org.
+
+Product Version: NetBeans IDE 8.0.2 (Build 201411181905)
+Updates: Updates available to version NetBeans 8.0.2 Patch 2
+Java: 1.8.0_40; Java HotSpot(TM) 64-Bit Server VM 25.40-b25
+Runtime: Java(TM) SE Runtime Environment 1.8.0_40-b26
+System: Windows 8 version 6.2 running on amd64; Cp1252; en_US (nb)
+User directory: C:\Users\My PC\AppData\Roaming\NetBeans\8.0.2
+Cache directory: C:\Users\My PC\AppData\Local\NetBeans\Cache\8.0.2
