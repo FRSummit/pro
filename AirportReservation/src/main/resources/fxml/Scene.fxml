@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.frsummit.airportreservation.FXMLController">
+   <children>
+      <VBox prefHeight="356.0" prefWidth="309.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label text="Airline Reservation" textFill="#612323">
+               <font>
+                  <Font name="System Bold Italic" size="36.0" />
+               </font>
+            </Label>
+            <ToolBar prefHeight="40.0" prefWidth="200.0">
+              <items>
+                <Button mnemonicParsing="false" onAction="#handleBookNowAction" text="BOOK NOW" textFill="#511a1a">
+                     <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                     </font>
+                  </Button>
+              </items>
+            </ToolBar>
+            <ToolBar layoutX="10.0" layoutY="263.0" prefHeight="40.0" prefWidth="200.0">
+               <items>
+                  <Button layoutX="10.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleSearchAction" text="SEARCH" textFill="#511a1a">
+                     <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="150.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleAvailableFlightAction" text="AVAILABLE FLIGHTS" textFill="#511a1a">
+                     <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="115.0" layoutY="10.0" mnemonicParsing="false" onAction="#handlePaymentAction" text="PAYMENTS" textFill="#511a1a">
+                     <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                     </font>
+                  </Button>
+               </items>
+            </ToolBar>
+            <GridPane prefHeight="52.0" prefWidth="800.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="395.0" minWidth="10.0" prefWidth="129.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="694.0" minWidth="10.0" prefWidth="324.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="694.0" minWidth="10.0" prefWidth="358.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Go To" textFill="#511b1b">
+                     <font>
+                        <Font name="System Bold Italic" size="26.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="25.0" />
+                     </GridPane.margin>
+                  </Label>
+               </children>
+            </GridPane>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="RESERVATIONS">
+                  <items>
+                        <MenuItem mnemonicParsing="false" onAction="#customerDetailsAction" text="Customer Details" />
+                    <MenuItem mnemonicParsing="false" onAction="#flightInformationAction" text="Flight Information" />
+                        <MenuItem mnemonicParsing="false" onAction="#tickerReservationAction" text="Ticket Reservation" />
+                        <MenuItem mnemonicParsing="false" onAction="#enquaryAction" text="Enquary" />
+                        <MenuItem mnemonicParsing="false" onAction="#cancelFlightAction" text="Cancel Flight" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
