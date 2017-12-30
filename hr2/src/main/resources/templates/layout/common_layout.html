@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+    <head>
+        <title>Project Skeleton Title</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">I DONT KNOW WHAT IS HAPPENING OR WHAT I'M DOING</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#" th:href="@{/home}">Home</a></li>
+                        <li><a href="#">Service</a></li>
+                        <li><a href="#">Profile</a></li>
+                        <li><a href="#" th:href="@{/logout}">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container-fluid"  style="margin-top:4%">
+            <div class="row row-offcanvas row-offcanvas-left">
+                <div class="col-sm-3 col-md-2 sidebar-offcanvas" id="sidebar" role="navigation">
+                    <ul class="nav nav-sidebar">
+                        <li th:classappend="${page == 'home' ? 'active' : ''}">
+                            <a href="#" th:href="@{/home}">Overview</a>
+                        </li>
+                        <li th:classappend="${page == 'navitem1' ? 'active' : ''}">
+                            <a href="#">My Profile</a>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-sidebar">
+                        <li th:classappend="${page == 'edit_profile' ? 'active' : ''}">
+                            <a href="#" th:href="@{/user/update-form}">Edit Profile</a>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-sidebar">
+                        <li th:classappend="${page == 'my_attendance' ? 'active' : ''}">
+                            <a href="#" th:href="@{/user/my-attendance}">My Attendance</a>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-sidebar">
+                        <li th:classappend="${page == 'my_leaves' ? 'active' : ''}">
+                            <a href="#" th:href="@{/user/my-leaves}">My Leaves</a>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-sidebar">
+                        <li th:classappend="${page == 'my_payment' ? 'active' : ''}">
+                            <a href="#" th:href="@{/user/my-payment}">My Payment</a>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-sidebar">
+                        <li th:classappend="${page == 'leave_application' ? 'active' : ''}">
+                            <a href="#" th:href="@{/user/apply-for-leave}">Leave Apply</a>
+                        </li>
+                    </ul>
+                    <ul sec:authorize="hasRole('ROLE_ADMIN')" class="nav nav-sidebar">
+                        <li th:classappend="${page == 'users' ? 'active' : ''}">
+                            <a href="#" th:href="@{/admin/users}">Employee List</a>
+                        </li>
+                    </ul>
+                    <ul sec:authorize="hasAnyAuthority('ADMIN')" class="nav nav-sidebar">
+                        <li th:classappend="${page == 'attendance_overview' ? 'active' : ''}">
+                            <a href="#" th:href="@{/admin/attendance}">Attendance</a>
+                        </li>
+                    </ul>
+
+                    <ul class="nav nav-sidebar">
+                        <li th:classappend="${page == 'attendance_overview' ? 'active' : ''}">
+                            <a href="#" th:href="@{/admin/set-payroll}">Set Payroll</a>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-sidebar">
+                        <li th:classappend="${page == 'leave_overview' ? 'active' : ''}">
+                            <a href="#" th:href="@{/admin/leave/overview}">Leaves</a>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-sidebar">
+                        <li th:classappend="${page == 'payroll_overview' ? 'active' : ''}">
+                            <a href="#" th:href="@{/admin/payroll/overview}">Payroll</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--/span-->
+                <div layout:fragment="content">
+                    <p>Page content goes here</p>
+                </div>
+                <!--/row-->
+            </div>
+        </div>
+    </body>
+</html>

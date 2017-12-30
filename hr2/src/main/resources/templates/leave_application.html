@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout/common_layout">
+
+<head>
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+</head>
+<body th:with="page='leave_application'">
+<div layout:fragment="content">
+    <div class="row">
+        <div class="col-md-6">
+        <!--<div class="col-md-6 col-md-offset-3">-->
+            <form action="#" th:action="@{/user/apply-for-leave}" th:object="${leaves}" method="post" class="form-horizontal">
+                <h2>Leave Application Form</h2>
+                <h4>Applicient</h4>
+                <!--<div class="form-group">-->
+                    <!--<div class="col-sm-5">-->
+                        <!--<input type="text" name="name" placeholder="Name" class="form-control" />-->
+                    <!--</div>-->
+                <!--</div>-->
+                <div class="form-group">
+                    <div class="col-sm-5">
+                        <h3 style="display:inline-block;" th:text="${titleLast}"></h3>
+                        <h3 style="display:inline-block;" th:text="${title}"></h3>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-5">
+                        <h3 style="display:inline-block;">Department :</h3>
+                        <h3 style="display:inline-block;" th:text="${department}"></h3>
+                    </div>
+                </div>
+                <!--<div class="form-group" style="clear: both">-->
+                    <!--<div class="col-sm-5">-->
+                        <!--<h3 style="float: left">Department :</h3>-->
+                        <!--<h3 style="float: right" th:text="${department}">Dep</h3>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+                <!--<div class="form-group">-->
+                    <!--<div class="col-sm-5">-->
+                        <!--<input type="text" name="department" placeholder="Department" class="form-control" />-->
+                    <!--</div>-->
+                <!--</div>-->
+
+                <!--USER DEPARTMENT SELECTION-->
+                <!--<div class="form-group">-->
+                    <!--<div class="col-sm-6">-->
+                        <!--<select name="department" class="form-control">-->
+                            <!--<option>CSE</option>-->
+                            <!--<option>BBA</option>-->
+                            <!--<option>EEE</option>-->
+                            <!--<option>LAW</option>-->
+                            <!--<option>ENGLISH</option>-->
+                            <!--<option>BANGLA</option>-->
+                            <!--<option>ARABIAN</option>-->
+                        <!--</select>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+
+                <!--<h4>Annual Leave info</h4>-->
+                <!--<h5>Total</h5>-->
+                <!--<div class="progress">-->
+                    <!--<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">-->
+                        <!--70%-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<h5>Taken</h5>-->
+                <!--<div class="progress">-->
+                    <!--<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:50%">-->
+                        <!--50%-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<h5>Balance</h5>-->
+                <!--<div class="progress">-->
+                    <!--<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:30%">-->
+                        <!--30%-->
+                    <!--</div>-->
+                <!--</div>-->
+
+
+                <!--Annual Leave info-->
+
+                <!--<div class="form-group">-->
+                    <!--<div class="col-sm-5">-->
+                        <!--<table class="table table-striped">-->
+                            <!--<thead>-->
+                                <!--<tr>-->
+                                    <!--<th>Total Leave</th>-->
+                                    <!--<th>Taken</th>-->
+                                    <!--<th>Balance</th>-->
+                                <!--</tr>-->
+                            <!--</thead>-->
+                            <!--<tbody>-->
+                                <!--<tr th:each="leaves : ${leavesList}">-->
+                                    <!--<td th:text="${leaves.totalLeaves}"></td>-->
+                                    <!--<td th:text="${leaves.takenLeaves}"></td>-->
+                                    <!--<td th:text="${leaves.balanceLeaves}"></td>-->
+                                <!--</tr>-->
+                            <!--</tbody>-->
+                        <!--</table>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+
+
+
+
+
+
+
+
+                <h4>Details of Apply</h4>
+                <!--<h5>Apply To</h5>-->
+                <!--<div class="form-group">-->
+                    <!--<div class="col-sm-6">-->
+                        <!--<select name="applyTo" class="form-control">-->
+                            <!--<option>CO-ORDINATOR</option>-->
+                            <!--<option>CHAIRMAN</option>-->
+                            <!--<option>DIN</option>-->
+                        <!--</select>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+
+                <h5>Date Applied</h5>
+                <div class="form-group">
+                    <div class="col-sm-9">
+                        <input type="date" name="currentDate" placeholder="Current Date" class="form-control" />
+                    </div>
+                </div>
+                <h4>Leave Type</h4>
+                <div class="form-group">
+                    <div class="col-sm-9">
+                        <input type="text" name="leaveType" placeholder="Leave Type" class="form-control" />
+                    </div>
+                </div>
+                <h4>Leave From</h4>
+                <div class="form-group">
+                    <div class="col-sm-9">
+                        <input type="date" name="leaveFrom" placeholder="Leave From" class="form-control" />
+                    </div>
+                </div>
+                <h4>Leave To</h4>
+                <div class="form-group">
+                    <div class="col-sm-9">
+                        <input type="date" name="leaveTo" placeholder="Leave To" class="form-control" />
+                    </div>
+                </div>
+                <h4>Leave Reason</h4>
+                <div class="form-group">
+                    <div class="col-sm-9">
+                        <input type="text" name="leaveReason" placeholder="Leave Reason" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-9">
+                        <a href="#" th:href="@{/user/cancel-leave}" type="bytton" class="btn btn-primary">Cancel</a>
+                        <!--<a href="#" th:href="@{/user/apply-leave}" type="bytton" class="btn btn-primary">Apply</a>-->
+                        <!--<button type="submit" class="btn btn-primary">Apply</button>-->
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-9">
+                        <button type="submit" class="btn btn-primary">Apply</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

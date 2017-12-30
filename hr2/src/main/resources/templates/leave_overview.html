@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout/common_layout">
+
+    <head>
+        <title>My Payment</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    </head>
+
+    <body th:with="page='leave_overview'">
+        <div layout:fragment="content">
+            <div class="table-responsive">
+                <h1>Employee Leaves</h1>
+                <h5>Update Leave Application</h5>
+                <form action="#" th:action="@{/admin/leave-status-update}" method="get">
+                    <div class="form-group">
+                        <div class="col-sm-2">
+                            <input type="text" name="leaveId"  placeholder="Leave Id" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-2">
+                            <select name="selectStatus" class="form-control">
+                                <option>Checking</option>
+                                <option>Granted</option>
+                                <option>Reject Reason 1</option>
+                                <option>Reject Reason 2</option>
+                                <option>Reject Reason 3</option>
+                                <option>Reject Reason 4</option>
+                                <option>Reject Reason 5</option>
+                                <option>Reject Reason 6</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-4">
+                            <input type="text" name="message"  placeholder="Message for Client" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-2">
+                            <button type="submit" class="btn btn-primary btn-block">Update</button>
+                        </div>
+                    </div>
+                </form>
+
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Serial</th>
+                            <th>L-Id</th>
+                            <th>Apply to</th>
+                            <!--<th>Action By</th>-->
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Department</th>
+                            <th>Applied Date</th>
+                            <th>Type</th>
+                            <th>From</th>
+                            <th>To</th>
+                            <th>Reason</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="leaves, leavesStat : ${leavesList}">
+                            <td th:text="${leavesStat.count}"></td>
+                            <td th:text="${leaves.leaveId}"></td>
+                            <td th:text="${leaves.applyTo}"></td>
+                            <!--<td th:text="${leaves.actiondBy}"></td>-->
+                            <td th:text="${leaves.leaveUserId}"></td>
+                            <td th:text="${leaves.leaveUserName}"></td>
+                            <td th:text="${leaves.userLeaveDepartment}"></td>
+                            <td th:text="${leaves.leaveApplyDate}"></td>
+                            <td th:text="${leaves.leaveType}"></td>
+                            <td th:text="${leaves.leaveFrom}"></td>
+                            <td th:text="${leaves.leaveTo}"></td>
+                            <td th:text="${leaves.leaveReason}"></td>
+                            <td th:text="${leaves.leaveStatus}"></td>
+                            <!--<td th:text="${leaves.status}">Granted</td>-->
+                            <!--<td>-->
+                                <!--<input type="button" name="granted" value="Granted" class="btn btn-primary btn-lg active" />-->
+                                <!--<input type="button" name="rejected" value="Rejected" class="btn btn-primary btn-lg active" />-->
+                            <!--</td>-->
+                        </tr>
+                        <!--<tr>-->
+                            <!--<td>1</td>-->
+                            <!--<td>CHAIRMAN</td>-->
+                            <!--<td>071</td>-->
+                            <!--<td>FRSummit</td>-->
+                            <!--<td>CSE</td>-->
+                            <!--<td>12-/12-12</td>-->
+                            <!--<td>type</td>-->
+                            <!--<td>12-12-12</td>-->
+                            <!--<td>11-11-19</td>-->
+                            <!--<td>Nothing</td>-->
+                            <!--<td>Granted</td>-->
+                        <!--</tr>-->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

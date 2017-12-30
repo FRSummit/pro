@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout/common_layout">
+
+    <head>
+        <title>Attendance Overview</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    </head>
+
+    <body th:with="page='attendance_overview'">
+        <div layout:fragment="content">
+            <h1>Employee Attendence</h1>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Serial</th>
+                        <th>Employee</th>
+                        <!--<th>Shift hour</th>-->
+                        <th>Status</th>
+                        <th>Punches</th>
+                        <th>Late By</th>
+                        <!--<th>Department</th>-->
+                        <th>Perform(%)</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="attendance, attendanceStat : ${attendanceList}">
+                        <td th:text="${attendanceStat.count}">1</td>
+                        <td th:text="${attendance.attendEmail}">FRSummit</td>
+                        <!--<td th:text="${attendance.shiftHour}">Day/Night</td>-->
+                        <td th:text="${attendance.inOutStatus}">In/Out</td>
+                        <!--<td th:text="${attendance.lateBy}">40mins</td>-->
+                        <td th:text="${attendance.punchTime}">12:30pm</td>
+                        <!--<td th:text="${attendance.department}">CSE</td>-->
+                        <!--<td th:text="${attendance.perform}">85%</td>-->
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>FRSummit</td>
+                        <!--<td>Day/Night</td>-->
+                        <td>In/Out</td>
+                        <td>12:30pm</td>
+                        <td>40mins</td>
+                        <!--<td>CSE</td>-->
+                        <td>85%</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

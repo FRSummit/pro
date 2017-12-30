@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout/common_layout">
+
+    <head>
+        <title>Update Profile</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    </head>
+
+    <body th:with="page='set-payroll'">
+        <div layout:fragment="content">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <form action="#" th:action="@{/admin/set-payroll}" method="post" class="form-horizontal" role="form" style="margin:0 0 0 -50%">
+                        <h2>Set Payment</h2>
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                <input type="text" name="userPayEmail"  placeholder="User Email" class="form-control" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                <input type="text" name="basic" placeholder="Basic" class="form-control" />
+                            </div>
+                        </div>
+                        <!--<div class="form-group">-->
+                            <!--<div class="col-sm-9">-->
+                                <!--<input type="text" name="medical" placeholder="Madical" class="form-control" />-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                            <!--<div class="col-sm-9">-->
+                                <!--<input type="text" name="hra" placeholder="HRA" class="form-control" />-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                            <!--<div class="col-sm-9">-->
+                                <!--<input type="text" name="ta" placeholder="TA" class="form-control" />-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                            <!--<div class="col-sm-9">-->
+                                <!--<input type="text" name="da" placeholder="DA" class="form-control" />-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                            <!--<div class="col-sm-9">-->
+                                <!--<input type="text" name="incentive" placeholder="Incentive" class="form-control" />-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <div class="form-group">
+                            <div class="col-sm-5">
+                                <button type="submit" class="btn btn-primary btn-block">Set</button>
+                            </div>
+                        </div>
+                        <span th:utext="${successMessage}"></span>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout/common_layout">
+
+    <head>
+        <title>My Payment</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    </head>
+
+    <body th:with="page='payroll_overview'">
+        <div layout:fragment="content">
+            <div class="table-responsive">
+                <h1>Employee Payrolls</h1>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Serial</th>
+                                <th>Id</th>
+                                <th>Email</th>
+                                <th>Basic</th>
+                                <th>Medical</th>
+                                <th>HRA</th>
+                                <th>TA</th>
+                                <th>DA</th>
+                                <th>Incentive</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>00</td>
+                                <td>00</td>
+                                <td>f@r</td>
+                                <td>12</td>
+                                <td>12</td>
+                                <td>12</td>
+                                <td>12</td>
+                                <td>12</td>
+                                <td>12</td>
+                            </tr>
+                            <tr th:each="payroll, payrollStat : ${payrollList}">
+                                <td th:text="${payrollStat.count}">1</td>
+                                <td th:text="${payroll.payId}">1</td>
+                                <td th:text="${payroll.payUserEmail}">f@r</td>
+                                <td th:text="${payroll.basicPay}">12</td>
+                                <td th:text="${payroll.madicalPay}">12</td>
+                                <td th:text="${payroll.hraPay}">12</td>
+                                <td th:text="${payroll.taPay}">12</td>
+                                <td th:text="${payroll.daPay}">12</td>
+                                <td th:text="${payroll.incentivePay}">12</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

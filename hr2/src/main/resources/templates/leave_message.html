@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+    <head>
+        <title>Leave Message</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    </head>
+
+    <body th:with="page='leave_message'">
+        <div layout:fragment="message_content">
+            <div class="table-responsive">
+                <div  class="form-group">
+                    <div class="col-sm-3">
+                        <table class="table table-striped ">
+                            <thead>
+                                <tr>
+                                    <th>Serial</th>
+                                    <th>L-Id</th>
+                                    <th>L-Id</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr th:each="leaves, leavesStat : ${leavesList}">
+                                    <td th:text="${leavesStat.count}"></td>
+                                    <td th:text="${leaves.leaveId}"></td>
+                                    <td th:text="${leaves.applyTo}"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>

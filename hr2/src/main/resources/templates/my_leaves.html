@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout/common_layout">
+
+    <head>
+        <title>Attendance Overview</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    </head>
+
+    <body th:with="page='my_leaves'">
+        <div layout:fragment="content">
+            <div class="table-responsive">
+
+                <!--&lt;!&ndash;Message Content&ndash;&gt;-->
+                <!--<div layout:fragment="message_content">-->
+                    <!--<p>Message content goes here</p>-->
+                <!--</div>-->
+
+                <div class="table-responsive">
+                    <div  class="form-group">
+                        <div class="col-sm-3">
+                            <table class="table table-striped ">
+                                <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Leave Id</th>
+                                    <th>Message</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr th:each="message : ${messageList}">
+                                    <td th:text="${message.messageId}"></td>
+                                    <td th:text="${message.leaveId}"></td>
+                                    <td th:text="${message.message}"></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="form-group">
+                    <div class="col-sm-5">
+                        <h3 style="display:inline-block;">Status : </h3>
+                        <h3 style="display:inline-block;" th:text="${myLeaveStatus}">ss</h3>
+                    </div>
+                </div>
+
+                <div>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Serial</th>
+                                <th>L-Id</th>
+                                <th>Apply to</th>
+                                <!--<th>Id</th>-->
+                                <!--<th>Name</th>-->
+                                <!--<th>Department</th>-->
+                                <th>Applied Date</th>
+                                <th>Type</th>
+                                <th>From</th>
+                                <th>To</th>
+                                <th>Reason</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr th:each="leaves, leavesStat : ${leavesList}">
+                                <td th:text="${leavesStat.count}"></td>
+                                <td th:text="${leaves.leaveId}"></td>
+                                <td th:text="${leaves.applyTo}"></td>
+                                <!--<td th:text="${leaves.leaveUserId}"></td>-->
+                                <!--<td th:text="${leaves.leaveUserName}"></td>-->
+                                <!--<td th:text="${leaves.userLeaveDepartment}"></td>-->
+                                <td th:text="${leaves.leaveApplyDate}"></td>
+                                <td th:text="${leaves.leaveType}"></td>
+                                <td th:text="${leaves.leaveFrom}"></td>
+                                <td th:text="${leaves.leaveTo}"></td>
+                                <td th:text="${leaves.leaveReason}"></td>
+                                <td th:text="${leaves.leaveStatus}"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
