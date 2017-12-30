@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="335.0" prefWidth="467.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.40" fx:controller="com.frsummit.hostlemanagement.FXMLController">
+   <children>
+      <Label layoutX="51.0" layoutY="26.0" text="HOSTLE MANAGE SYSTEM">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <Button layoutX="47.0" layoutY="129.0" mnemonicParsing="false" onAction="#student" text="STUDENT">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="245.0" layoutY="204.0" mnemonicParsing="false" onAction="#hall" text="HALL">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="48.0" layoutY="204.0" mnemonicParsing="false" onAction="#room" text="ROOM">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="188.0" layoutY="129.0" mnemonicParsing="false" onAction="#furniture" text="FURNITURE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="347.0" layoutY="129.0" mnemonicParsing="false" onAction="#staff" text="STAFF">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="159.0" layoutY="204.0" mnemonicParsing="false" onAction="#fee" text="FEE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="349.0" layoutY="204.0" mnemonicParsing="false" onAction="#mess" text="MESS">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
